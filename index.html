@@ -1,66 +1,113 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Practiceupdate by bradstrong</title>
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Practiceupdate</h1>
-        <p>Elsevier Practice Update</p>
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
 
-        <p class="view"><a href="https://github.com/bradstrong/practiceUpdate">View the Project on GitHub <small>bradstrong/practiceUpdate</small></a></p>
+  <title>Welcome to Foundation</title>
 
+  <!-- Included CSS Files -->
+  <link rel="stylesheet" href="assets/css/foundation.css">
 
-        <ul>
-          <li><a href="https://github.com/bradstrong/practiceUpdate/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/bradstrong/practiceUpdate/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/bradstrong/practiceUpdate">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>Welcome to GitHub Pages.</h3>
+  <script src="assets/js/vendor/custom.modernizr.js"></script>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+</head>
+<body>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/bradstrong">bradstrong</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+  <div class="row">
+    <div class="twelve columns">
+      <h2>Welcome to Foundation</h2>
+      <p>This is version 4.0 released on February 28, 2013.</p>
+      <hr />
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+  </div>
+
+  <div class="row">
+    <div class="eight columns">
+      <h3>The Grid</h3>
+
+      <!-- Grid Example -->
+      <div class="row">
+        <div class="twelve columns">
+          <div class="panel">
+            <p>This is a twelve column section in a row. Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <div class="panel">
+            <p>Six columns</p>
+          </div>
+        </div>
+        <div class="six columns">
+          <div class="panel">
+            <p>Six columns</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <div class="panel">
+            <p>Four columns</p>
+          </div>
+        </div>
+        <div class="four columns">
+          <div class="panel">
+            <p>Four columns</p>
+          </div>
+        </div>
+        <div class="four columns">
+          <div class="panel">
+            <p>Four columns</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Tabs</h3>
+      <dl class="tabs">
+        <dd class="active"><a href="#simple1">Simple Tab 1</a></dd>
+        <dd><a href="#simple2">Simple Tab 2</a></dd>
+        <dd><a href="#simple3">Simple Tab 3</a></dd>
+      </dl>
+
+      <ul class="tabs-content">
+        <li class="active" id="simple1Tab">This is simple tab 1's content. Pretty neat, huh?</li>
+        <li id="simple2Tab">This is simple tab 2's content. Now you see it!</li>
+        <li id="simple3Tab">This is simple tab 3's content. It's, you know...okay.</li>
+      </ul>
+
+      <h3>Buttons</h3>
+
+      <div class="row">
+        <div class="six columns">
+          <p><a href="#" class="small button">Small Button</a></p>
+          <p><a href="#" class="button">Medium Button</a></p>
+          <p><a href="#" class="large button">Large Button</a></p>
+        </div>
+        <div class="six columns">
+          <p><a href="#" class="small alert button">Small Alert Button</a></p>
+          <p><a href="#" class="success button">Medium Success Button</a></p>
+          <p><a href="#" class="large secondary button">Large Secondary Button</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="four columns">
+      <h4>Getting Started</h4>
+      <p>We're stoked you want to try Foundation! To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
+
+      <h4>Other Resources</h4>
+      <p>Once you've exhausted the fun in this document, you should check out:</p>
+      <ul class="disc">
+        <li><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</li>
+        <li><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</li>
+        <li><a href="http://twitter.com/foundationzurb">@foundationzurb</a><br />Ping us on Twitter if you have questions. If you build something with this we'd love to see it (and send you a totally boss sticker).</li>
+      </ul>
+    </div>
+  </div>
+</body>
 </html>
