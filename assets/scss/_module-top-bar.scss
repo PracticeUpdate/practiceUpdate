@@ -1,0 +1,85 @@
+// Module Top Bar
+.top-bar {
+  background-color:transparent;
+  /* Setting up the sliding area */
+	section{
+		// @include grid-column(9, $float: left);
+  // ul{@extend .right;}
+	}
+  ul {
+    &#main-nav{@extend .right;}
+  	li.name{
+  		// @include grid-column(3, $float: left);
+  		}
+    li:not(.name) {
+    	text-transform:uppercase;
+      &.active {
+      	@include site-gradient($pri-orange);
+			}
+			&:hover{
+				background-color:$pri-blue;
+			}
+			&.active, &:hover{
+				& a{color:$white;}
+			}
+    }
+    li a:not(.button){
+    	//padding: 0 10px !important;
+    }
+  }
+}
+
+.page-header{background-color:transparent;}
+.page-header.fixed{
+  background-color:transparent;
+  @include elementBoxShadow;
+  .top-bar{
+      @include noise($bodyBackground, 0.02);
+  }
+}
+
+@media only screen and (max-width: $topBarBreakPoint) {
+.top-bar{
+  background:transparent;
+  ul{
+    li.toggle-topbar{
+      // width:$topBarHeightMobile + 20px;
+      // &:hover{background-color:$ter-ltTan}
+    }
+    li.name{
+      text-align: center;
+      &:hover{background: transparent;}
+      .site-branding{
+        max-width:30%;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        a{padding:0;}
+      }
+    }
+  }
+  .off-canvas-control{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index:10;
+    #sidebarButton{
+      color:$pri-orange;
+      @include site-gradient(lighten($ter-ltTan, 7%));
+      background-color: $white;
+      border-color:$ter-ltTan;//$sec-dkBlue;
+      width:40px;
+      height:40px;
+      padding: 10px 0;
+      border-radius:3px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    }
+  }
+}
+
+//div.off-canvas-control > div.control-visibility > div.sidebar-button-container > a.sidebar-button button
+//  background:$white;
+
+	}//end @media
+
+//	@media only screen and (max-width: 768px)

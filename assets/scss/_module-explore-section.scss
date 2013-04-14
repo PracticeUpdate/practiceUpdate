@@ -1,0 +1,25 @@
+.explore-sections{
+	@include grid-column(12);
+}
+.section-widget{
+	// 	section{
+
+	// }
+	@include  grid-row();
+		margin-bottom:1em;
+	li{list-style: none;}
+	.meta.title{
+		font-weight: bold;
+	}
+	.section-header{
+		@include grid-column(12);
+	}
+	.section-content{
+		@include grid-column(12);
+		.entry{
+			border-bottom:1px solid lighten($body-font-color, 55);
+			//p{margin-bottom:.5em;}
+			//.meta.title{margin-bottom: .25em;}
+		}
+	}
+}
