@@ -1,8 +1,8 @@
 .footer-row {
-	&:nth-child(1){@include grid-column(4, $float: left);}
-	&:nth-child(2){@include grid-column(4, $float: left);}
+/* 	&:nth-child(1){@include grid-column(4, $float: left);} */
+/* 	&:nth-child(2){@include grid-column(4, $float: left);} */
 	&:nth-child(3){
-		@include grid-column(4, $float: left);
+/* 		@include grid-column(4, $float: left); */
 		@media only screen and (max-width: $topBarBreakPoint) {
 			text-align: center;
 		}

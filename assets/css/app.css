@@ -7555,29 +7555,14 @@ section[role="main"] {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   }
 }
-/* line 2, ../scss/_module-page-footer.scss */
-.footer-row:nth-child(1) {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 33.33333%;
-  float: left;
-}
-/* line 3, ../scss/_module-page-footer.scss */
-.footer-row:nth-child(2) {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 33.33333%;
-  float: left;
+/* line 1, ../scss/_module-page-footer.scss */
+.footer-row {
+  /* 	&:nth-child(1){@include grid-column(4, $float: left);} */
+  /* 	&:nth-child(2){@include grid-column(4, $float: left);} */
 }
 /* line 4, ../scss/_module-page-footer.scss */
 .footer-row:nth-child(3) {
-  position: relative;
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 33.33333%;
-  float: left;
+  /* 		@include grid-column(4, $float: left); */
 }
 @media only screen and (max-width: 768px) {
   /* line 4, ../scss/_module-page-footer.scss */
@@ -9412,39 +9397,40 @@ body.experimental-b .page-header.fixed .top-bar {
 }
 /* line 62, ../scss/app.scss */
 .top-level-nest .child-indicator {
-  float: right;
+  position: relative;
+  right: 1;
 }
-/* line 69, ../scss/app.scss */
+/* line 71, ../scss/app.scss */
 .top-level-nest .current {
   font-weight: bold;
 }
-/* line 70, ../scss/app.scss */
+/* line 72, ../scss/app.scss */
 .top-level-nest ul {
   transition-timing-function: ease-in-out;
   transition-duration: 0.3s;
   position: relative;
 }
-/* line 73, ../scss/app.scss */
+/* line 75, ../scss/app.scss */
 .top-level-nest ul ul {
   top: 0;
   visibility: hidden;
 }
-/* line 76, ../scss/app.scss */
+/* line 78, ../scss/app.scss */
 .top-level-nest ul ul.current-child {
   visibility: visible;
 }
-/* line 78, ../scss/app.scss */
+/* line 80, ../scss/app.scss */
 .top-level-nest ul ul, .top-level-nest ul li {
   width: 100%;
 }
-/* line 80, ../scss/app.scss */
+/* line 82, ../scss/app.scss */
 .top-level-nest ul ul {
   margin-left: 100%;
   position: absolute;
   /*       &.current-child{position: relative;} */
 }
 
-/* line 89, ../scss/app.scss */
+/* line 91, ../scss/app.scss */
 .tier-two {
   left: -100%;
 }

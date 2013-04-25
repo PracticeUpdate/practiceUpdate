@@ -269,7 +269,7 @@ function menuInit() {
   $('.top-level-nest ul ul').prepend('<li><a href="#" class="back-button button small">back</a></li>');
   $('.top-level-nest ul:first').addClass('menu-parent');
   menuParentHeight = $('.menu-parent').height();
-  $('.top-level-nest ul:first a').click(function() {
+  $('.top-level-nest ul:first a').not('.all-topics').click(function() {
   $('.current-child a').not('.back-button').not('current').click(function(){
     $('.current-child .current').removeClass('current');
     $(this).toggleClass('current');
