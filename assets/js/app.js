@@ -272,9 +272,10 @@ function menuInit() {
   $('.top-level-nest ul:first a').click(function() {
   $('.current-child a').not('.back-button').not('current').click(function(){
     $('.current-child .current').removeClass('current');
-    $(this).addClass('current');
+    $(this).toggleClass('current');
   });
   $(this).siblings('ul:first').addClass('current-child');
+    $('.current-child .topic-all a').addClass('current');
     var curChildHeight = $(this).siblings('ul:first').height();
     $('.top-level-nest').height(curChildHeight);
     $('.menu-parent').addClass('tier-two');
