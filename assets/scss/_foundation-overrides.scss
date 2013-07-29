@@ -6,23 +6,12 @@
 //Compass
 $experimental-support-for-svg: true; //support SVG in IE
 
-// Modular Scale Settings
-
-// $ratio: $golden; // THIS IS DEFAULT IN MODULAR-SCALE
-$baseFontSize: 14px;
-$importantModNum: 44px;
-$base-size: $baseFontSize $importantModNum;
-// Produced the following list of values: 14, 17, 23, 27, 37, 44, 59, 71, 95, 115;
-// http://www.modularscale.com by Tim Brown
-// https://github.com/scottkellum/modular-scale by scottkellum
-
 // Colors
 $white: #ffffff;
-$black: #000000;
 $grey: #ededed;
 $blue:#00aeff;
 $green:#dae348;
-$bodyBackground: rgb(255,252,240);
+$bodyBackground: #faf9f4; //rgb(255,252,240);
 $itemBackground: #fcfcfa;
 
 $juneoblue: #43A1DA;
@@ -49,10 +38,16 @@ $ter-green:rgba(163,165,16,1); // pantone 294
 // Additional
 
 // Rebrand
-$bodyBackground: rgb(247,242,228);
+$bodyBackground: #faf9f4; //rgb(247,242,228);
 
 $pri-blue: 		rgb(29,121,152); //#
-$pri-orange: 	rgb(216,102,84); //#
+$pri-ltBlue: rgb(2, 177, 201); //#02b1c9
+$pri-orange: rgb(215,81, 66);
+/* $pri-orange: 	rgb(216,102,84); //# */
+/* $pri-orange: 	rgb(234,60,47); //# */
+
+$pri-mid-grey: #b7b7b7;
+$pri-lt-grey: #e6e7e8;
 
 $sec-ltBlue: 		rgb(108,176,195); //#
 $sec-dkBlue: 		rgb(23,46,84); //#
@@ -109,7 +104,7 @@ $titleFontFamily: $sansCondensedFontFamily, "Helvetica Neue", "Helvetica", Helve
 	}
 	/* TODO: Fix color code to match PSD */
 	@include background(linear-gradient(top, $color, $color2), inline-image("../img/noise.jpg"));
-}       
+}
 
 @mixin site-gradient($color:$pri-blue, $colorDif:10%, $shinyEdge:"false", $ie-compat:"true"){
 	@if $ie-compat == "true"{
@@ -122,13 +117,23 @@ $titleFontFamily: $sansCondensedFontFamily, "Helvetica Neue", "Helvetica", Helve
 		}
 }
 
+//export style to separate stylesheet for Juneo
+$juneo-content: false !default;
+@mixin juneo-content {
+    // Only use this content if we're dealing with old IE
+    @if $juneo-content {
+        @content;
+    }
+}
+
+
 // ----------------------------------------
 // Overrides for Foundation settings (_settings.scss)
 
 // Grid Settings
 
-$rowWidth: 1440px;// 100%sets site to fluid grid
-
+//$rowWidth: 1440px;// 100%sets site to fluid grid
+$rowWidth: 100%;
 // Colors Settings
 
 $mainColor: $pri-orange;//logo orange Previously: //rgb(16,112,144);//$sec-dkBlue;
@@ -148,15 +153,15 @@ $buttonRadius: 3px;
 
 // Top Bar Settings
 
-$topBarBgColor: $bodyBackground;
-$topBarHeight: 60px;
-$topBarHeightMobile: 60px;
+$topBarBgColor: $pri-blue;
+$topBarHeight: 40px;
+$topBarHeightMobile: 40px;
 $topBarBtmMargin: 0px;
-$topBarLinkColor: $pri-blue;
-$topBarDropBgColor: #fff;
+$topBarLinkColor: #fff;
+$topBarDropBgColor: $pri-blue;
 $topBarDropLinkColor: $pri-blue;
 $topBarDropToggleColor: $pri-blue;
 $topBarDropToggleAlpha: 1;
-$topBarBreakPoint: 768px; // Change to 9999px for always mobile layout
+$topBarBreakPoint: 769px; // Change to 9999px for always mobile layout
 
 $topBarNavToggleColor:$mainColor;//Added by bradstrong 2012-11-11

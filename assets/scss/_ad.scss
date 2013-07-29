@@ -85,5 +85,19 @@
 	max-height: 600px;
 }
 
+#filmstrip1{
+	object, embed{
+		display:block;
+		height: 600px;
+		width: 300px;
+	}
+}
+#filmstrip1content{}
+#filmstrip1contentinner{
+	max-width: 300px;
+	margin: 0 auto;
+	max-height: 600px;
+}
+
 // Hide leaderboard containers on mobile
 #leaderboard{@media only screen and (max-width: $small-screen) {display:none;}}

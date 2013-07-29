@@ -1,10 +1,13 @@
 /* icons for use in all elements */
-@import "font-awesome.scss";
+@import "font-awesome";
 
 /* global elements */
 select{
 	// margin: 0 0 $form-spacing;
 }
+
+a:hover{text-decoration: underline;}
+a{ word-wrap: break-word;-ms-hyphens: auto;}
 
 object, embed{
 	display:block;
@@ -13,7 +16,7 @@ object, embed{
 }
 
 cite{
-	font-style: normal;
+/* 	font-style: normal; */
 }
 
 small{font-size:85%;}

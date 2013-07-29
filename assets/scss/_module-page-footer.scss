@@ -1,8 +1,11 @@
-.footer-row {
-	&:nth-child(1){@include grid-column(4, $float: left);}
-	&:nth-child(2){@include grid-column(4, $float: left);}
+.page-footer .footer-row {
+	&:nth-child(1){@include column(2);}
+	&:nth-child(2){@include column(6);}
 	&:nth-child(3){
-		@include grid-column(4, $float: left);
+		@include column(3);
+		@media only screen and (min-width: $topBarBreakPoint) {
+			@include push(1);
+		}
 		@media only screen and (max-width: $topBarBreakPoint) {
 			text-align: center;
 		}
@@ -38,11 +41,39 @@
 	}
 
 	.social-links {
-@include  block-grid(3);
-		i{@extend .icon-2x;}
+	 i{@extend .icon-2x;}
 	}
 	.page-footer .copyright {
 		// width:100%;
 		// padding:0;
+	}
+}
+
+/* ----------------
+experimental footer - left sidebar
+-------------------
+
+<div class="component exp-footer-container">
+	<footer class="site-footer">
+	</footer><!-- /.site-footer -->
+</div><!--/.exp-footer-container-->
+
+------------------ */
+/* .exp-footer-container{} */
+
+.site-footer .footer-row {
+  a{color: #1d7999;}
+	ul{
+    text-align: center;
+    li{
+      float:none;
+      display:inline-block;
+  	}
+  	&.social-links {
+  	 i{@extend .icon-2x;}
+  	}
+	}
+	p.copyright{
+  	text-align: center;
 	}
 }

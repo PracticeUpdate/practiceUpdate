@@ -26,7 +26,7 @@
 	<!-- IE Fix for HTML5 Tags -->
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]--> 
+	<![endif]-->
 
 </head>
 <body id="page" class="explore off-canvas slide-nav logged-out page-explore">
@@ -42,69 +42,31 @@
 	<div class="page-content">
 		<section role="main">
 			<div class="explore-container">
-				<div class="explore-feature">
-					<div class="feature-item">
-						<!-- !#story-of-the-week -->
-						<section id="story-of-the-week" class="">
-							<header class="section-header">
-								<h1>story of the week</h1>
-								<p>Our physician editors collaborate weekly to choose the hottest stories</p>
-							</header><!--/.section-header-->
-							<div class="section-content"><!--/.section-content-->
-								<article class="article">
-									<hgroup>
-										<h3 class="article title"><a href ="story-of-the-week">Example Story of the Week Article Title Placed Above Its Teaser Content</a></h3>
-										<p class="meta source author">J Clin Oncol. 2012 Feb 20;30(6):593-599, N Niikura, J Liu, N Hayashi, E Mittendorf, Y Gong, S Palla, Y Tokuda, A Gonzalez-Angulo, G Hortobagyi, N Ueno</p>
-										<!-- <p>Elsevier Global Medical News. 2011 Dec 15</p> -->
-									</hgroup>								
-									<div class="article content">
-									<!--
-									There may not be images for story of the week
-										<section class="article commentary">
-											<h6>EXPERT COMMENTARY</h6>
-											<h6><a href="#">Lee S. Schwartzberg, MD, FACP</a></h6>
-										</section><!--/.commentary-->
-										<hr/>
-										<footer>
-											<p><a href="story-of-the-week" class="view-more">view more</a></p>
-										</footer>
-									</div><!--/.content-->
-								</article><!--/.article.content-->
-							</div><!--/.section-content-->
-						</section><!--/#story-of-the-week-->
-					</div><!--/.feature-item-->
-					<div class="feature-item">
-						<!-- !#story-of-the-week -->
-						<section id="story-of-the-week" class="">
-							<header class="section-header">
-								<h1>Featured News</h1>
-								<p>Our physician editors collaborate weekly to choose the hottest stories</p>
-							</header><!--/.section-header-->
-							<div class="section-content"><!--/.section-content-->
-								<article class="article">
-									<hgroup>
-										<h3 class="article title"><a href ="story-of-the-week">Example Story of the Week Article Title Placed Above Its Teaser Content</a></h3>
-										<p class="meta source author">J Clin Oncol. 2012 Feb 20;30(6):593-599, N Niikura, J Liu, N Hayashi, E Mittendorf, Y Gong, S Palla, Y Tokuda, A Gonzalez-Angulo, G Hortobagyi, N Ueno</p>
-										<!-- <p>Elsevier Global Medical News. 2011 Dec 15</p> -->
-									</hgroup>
-									<!--
-									There may not be images for story of the week
-									<figure class="article-image editors-choice">
-										<img src="http://placehold.it/220x220" />
-										<figcaption></figcaption>
-									</figure>
-									-->
-									<div class="article content">
-										<hr/>
-										<footer>
-											<p><a href="story-of-the-week" class="view-more">view more</a></p>
-										</footer>
-									</div><!--/.content-->
-								</article><!--/.article.content-->
-							</div><!--/.section-content-->
-						</section><!--/#story-of-the-week-->
-					</div><!--/.feature-item-->
-				</div><!--/.explore-feature-->
+			<div id="featured">
+<img src="../images/orbit-demo/demo1.jpg" />
+<img src="../images/orbit-demo/demo2.jpg" />
+<img src="../images/orbit-demo/demo3.jpg" />
+</div>
+
+<div class="stream-header">
+  <div class="topic-filter-helper">
+  <div class="eight columns">
+  <span class="current-filter-banner">All Topics</span>
+  </div>
+  <hr>
+  </div>
+<div id="user-topic-filter-sub">
+	<dl class="sub-nav">
+	<dt style="height: auto; line-height: 1.2em;">Popular Topics</dt>
+		<dd class="active"><a href="#simple1">Topic Name</a></dd>
+		<dd><a href="#simple2">Topic</a></dd>
+		<dd><a href="#simple3">NamedTopic</a></dd>
+		<dd><a href="#simple4">Topical</a></dd>
+		<dd><a href="#simple5">Topic Named Topic</a></dd>
+		<dd><a href="#simple6">SHRT</a></dd>
+	</dl>
+</div><!--/#user-topic-filter-sub-->
+</div>
 				<div class="explore-sections">
 				</div><!--/.explore-sections-->
 			</div><!--/.explore-container-->
@@ -118,18 +80,120 @@
 		</section><!--/[role="main"]-->
 		<section id="sidebar" role="complementary">
 			<div class="dashboard">
-				<div class="cta register">
-					<p><!-- Meet Our Experts --> Become a member to customize this page.<p>
-					<a class="button cta-button" href="#action-register">Register for free</a>
-				</div><!--/.panel.cta.register-->
-				<div class="cta take-tour">
-					<p><!-- Meet Our Experts --> Learn more about PracticeUpdate features<p>
-					<a id="start-tour" class="button cta-button" href="#">Start Feature Tour</a>
-				</div><!--/.panel.cta.register-->
+
 				<div class="component user-console">
 				</div><!--/.component.user-console-->
-				<div class="component user-topic">
-				</div><!--/.component.user-topic-->
+
+<!--Test Nested Menu-->
+<span class="nav-header" style="padding: 7px; display: block; border: 1px solid #e3dcd4; margin-top: 14px; background-color: white; color: #172e54; font-family: "MuseoSlab-500", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; font-weight: 500; padding: 7px 7px 2px;margin: 10px 0 0;">My Topics</span>
+<nav class="top-level-nest">
+<ul class="side-nav">
+  <li class="active">
+    <a class="all-topics" href="#">All items</a>
+  </li>
+  <li>
+    <a href="#">Cardiology <span class="counter is-hidden">30</span><i class="icon-chevron-right child-indicator"></i></a>
+    <ul>
+      <li class="topic-all"><a href="#">All Cardiology</a></li>
+      <li><a href="#">Arrhythmia/Heart Rhythm Disorder</a></li>
+      <li><a href="#">Acute coronary syndrome /coronar artery disease</a></li>
+      <li><a href="#">Heart Failure and Transplantation</a></li>
+      <li><a href="#">Heart Health-Prevention and Rehabilitation</a></li>
+      <li><a href="#">Imaging</a></li>
+      <li><a href="#">Pediatric &amp; Congenital Heart Conditions</a></li>
+      <li><a href="#">Valvular Heart Disease</a></li>
+      <li><a href="#">Vascular and Aortic Disease</a></li>
+      <li><a href="#">Hypertension</a></li>
+      <li><a href="#">Intervenional cardiology</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="#">Dermatology <span class="counter quiet-counter">30</span><i class="icon-chevron-right child-indicator"></i></a>
+    <ul>
+      <li class="topic-all"><a href="#">All Dermatology</a></li>
+      <li><a href="#">Dermatopathology</a></li>
+      <li><a href="#">Medical Dermatology </a></li>
+      <li><a href="#">Complex Medical Dermatology</a></li>
+      <li><a href="#">Cosmetic Dermatology</a></li>
+      <li><a href="#">Dermatological Surgery</a></li>
+      <li><a href="#">Pediatric Dermatology</a></li>
+      <li><a href="#">Occupational Dermatology and Contact Dermatitis</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="#">Urology <span class="counter quiet-counter">15</span><i class="icon-chevron-right child-indicator"></i></a>
+    <ul>
+      <li class="topic-all"><a href="#">All Urology</a></li>
+      <li><a href="#">urologic cancer</a></li>
+      <li><a href="#">stone disease</a></li>
+      <li><a href="#">infertility & andrology</a></li>
+      <li><a href="#">Male Voiding Dysfunction</a></li>
+      <li><a href="#">Female Urology</a></li>
+      <li><a href="#">pediatric urology</a></li>
+      <li><a href="#">Urinary Tract Infections</a></li>
+      <li><a href="#">Urologic Trauma</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="#">Eye Care <span class="counter is-hidden">30</span><i class="icon-chevron-right child-indicator"></i></a>
+    <ul>
+      <li class="topic-all"><a href="#">All Eye Care</a></li>
+      <li><a href="#">Low Vision/ Neurorehabilitative Optometry</a></li>
+      <li><a href="#">Refractive Surgery Comanagement</a></li>
+      <li><a href="#">Sports Vision/Vision Therapy</a></li>
+      <li><a href="#">Contact Lenses</a></li>
+      <li><a href="#">Pathology</a></li>
+      <li><a href="#">Retina</a></li>
+      <li><a href="#">Glaucoma</a></li>
+      <li><a href="#">Cataract/ anterior disease</a></li>
+      <li><a href="#">Refractive management</a></li>
+      <li><a href="#">Uveitis</a></li>
+      <li><a href="#">Neuro- ophthalmology</a></li>
+      <li><a href="#">Oculoplastics</a></li>
+      <li><a href="#">Pediatric ophthalmology</a></li>
+      <li><a href="#">Cornea and External Disease</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="#">Primary Care <span class="counter is-hidden">16</span><i class="icon-chevron-right child-indicator"></i></a>
+    <ul>
+      <li class="topic-all"><a href="#">All Primary Care</a></li>
+      <li><a href="#">Family Practice/Integrative medicine</a></li>
+      <li><a href="#">General Internal medicine</a></li>
+      <li><a href="#">Pediatrics</a></li>
+      <li><a href="#">Dermatology</a></li>
+      <li><a href="#">Cardiology (general)</a></li>
+      <li><a href="#">Urology</a></li>
+      <li><a href="#">Oncology (for screening)</a></li>
+      <li><a href="#">Endocrine (for diabetes)</a></li>
+      <li><a href="#">Psychiatry/Mental Health</a></li>
+      <li><a href="#">Preventative Medicine</a></li>
+      <li><a href="#">Healthcare Policy/healthcare reform expert/ACO</a></li>
+      <li><a href="#">Evidence-based medicine</a></li>
+      <li><a href="#">Pain specialist</a></li>
+      <li><a href="#">Rheumatology/Immunology</a></li>
+      <li><a href="#">Infectious Disease/immunization</a></li>
+      <li><a href="#">Wellness/Lifestyle/Nutrition</a></li>
+      <li><a href="#">Orthopedics/sports medicine</a></li>
+    </ul>
+  </li>
+
+  <li>
+    <a href="#">Oncology <span class="counter quiet-counter">30</span><i class="icon-chevron-right child-indicator"></i></a>
+    <ul>
+      <li class="topic-all"><a href="#">All Oncology</a></li>
+      <li><a href="#">Sample Cancer Type</a></li>
+    </ul>
+  </li>
+</ul>
+</nav>
+
+<!-- END Test Nested Menu-->
+
 				<div class="component topic-spotlight">
 				</div><!--/.component.topic-spotlight-->
 				<div class="cta meet-experts">
@@ -146,12 +210,12 @@
     <script src="assets/js/foundation/jquery.js"></script>
 
 	<script src="assets/js/foundation/jquery.foundation.accordion.js"></script>
-	<script src="assets/js/foundation/jquery.foundation.alerts.js"></script>	
+	<script src="assets/js/foundation/jquery.foundation.alerts.js"></script>
 	<script src="assets/js/foundation/jquery.foundation.buttons.js"></script>
 	<script src="assets/js/foundation/jquery.foundation.forms.js"></script>
 	<script src="assets/js/foundation/jquery.foundation.mediaQueryToggle.js"></script>
 	<script src="assets/js/foundation/jquery.foundation.navigation.js"></script>
-	<script src="assets/js/foundation/jquery.foundation.topbar.js"></script>	
+	<script src="assets/js/foundation/jquery.foundation.topbar.js"></script>
 	<script src="assets/js/foundation/jquery.foundation.orbit.js"></script>
 	<script src="assets/js/foundation/jquery.foundation.reveal.js"></script>
 	<script src="assets/js/foundation/jquery.foundation.tabs.js"></script>
@@ -162,12 +226,14 @@
 	<script src="assets/js/foundation/jquery.foundation.joyride.js"></script>
 
 	<script src="assets/js/foundation/app.js"></script>
+	<script src="assets/js/foundation/dev-app.js"></script>
+	<script src="assets/js/tamingselect.js"></script>
 
 	<script src="assets/js/mustache.js"></script>
 
 
 	<ol id="practiceupdate-tour" class="joyride-stoplist">
-<!-- 
+<!--
 Stop 1: Update tab
  Header: Update
  Content: A personalized view of the latest news, journal scans, and expert commentaries
@@ -175,7 +241,7 @@ Stop 1: Update tab
  Button: Next – Experts
 -->
 	<li data-id="li_update" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">A personalized view of the latest news, journal scans, and expert commentaries</li>
-<!-- 
+<!--
 Stop 2: Meet our Experts button
 	Header: Meet our Experts
 	Content: World-renowned experts that hand select content related to your chosen
@@ -183,35 +249,35 @@ Stop 2: Meet our Experts button
 	Button: Next – Profile and Settings
 	-->
 	<li data-class="meet-experts" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">World-renowned experts that hand select content related to your chosen</li>
-<!-- 
+<!--
 Stop 3: Profile and Settings button
  Header: Profile & Settings
  Content: Update your specialty(s), interests, and notification settings
  Button: Next – Specialty / All My Channels
  -->
 	<li data-id="UserConsolePreferences" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">Update your specialty(s), interests, and notification settings</li>
-<!-- 
+<!--
  Stop 4: Specialty / All My Channels
  Header: Specialty Channels
  Content: The customized view of your selected interests
  Button: Next – Spotlights
 -->
 	<li data-id="ul-specialties" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">The customized view of your selected interests</li>
-<!-- 
+<!--
  Stop 5: Spotlights
  Header: Spotlights
  Content: Highlighted topics related to your specialty
  Button: Next – Explore
 -->
 	<li data-id="ul_spotlight" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">Highlighted topics related to your specialty</li>
-<!-- 
+<!--
  Stop 6: Explore tab
  Header: Explore
  Content: News, Research, Reviews, and Expert Opinions from across your specialty channel.
  Button: Next – Learn
 -->
 	<li data-id="li_explore" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">News, Research, Reviews, and Expert Opinions from across your specialty channel.</li>
-<!-- 
+<!--
 Stop 7: Learn tab
  Header: Learn
  Content: CME opportunities and seminal articles
@@ -220,7 +286,7 @@ Stop 7: Learn tab
 	<li data-id="li_explore" data-options="tipLocation:top;tipAnimation:fade" data-button="Second Button">CME opportunities and seminal articles</li>
 </ol>
 <!--/#practiceupdate-tour-->
-<!-- documentation refernce 
+<!-- documentation refernce
 	http://www.zurb.com/playground/jquery-joyride-feature-tour-plugin
 -->
 
@@ -238,7 +304,7 @@ Stop 7: Learn tab
 
 	<!-- Mustache - homepage feed template -->
 	<script>
-	//<!-- Mustache - Explore News template -->
+
 	$.getJSON('content/json/explore_news.json', function(data) {
 		$.get('assets/mustache/section.mustache', function(template) {
 			//alert('Load was performed.');
@@ -283,57 +349,18 @@ Stop 7: Learn tab
 		});
 	});
 
-	<!-- Mustache - homepage user-console template -->
-	$.getJSON('content/json/user-console.json', function(data) {
-		$.get('assets/mustache/user-console.mustache', function(template) {
-			//alert('Load was performed.');
-	    var html = Mustache.to_html(template, data);
-	    $('.user-console').html(html);
-		});
+	//<!-- Mustache - Explore IFI -->
+	$.get('assets/mustache/from-industry.mustache', function(template) {
+    var html = Mustache.to_html(template);
+    $('.explore-sections').prepend(html);
 	});
-
-	<!-- Mustache - homepage user-topic template -->
-	$.getJSON('content/json/user-topic.json', function(data) {
-		$.get('assets/mustache/user-topic.mustache', function(template) {
-			//alert('Load was performed.');
-	    var html = Mustache.to_html(template, data);
-	    $('.user-topic').html(html);
-		});
-	});
-
-	<!-- Mustache - homepage topic-spotlight template -->
-	$.getJSON('content/json/topic-spotlight.json', function(data) {
-		$.get('assets/mustache/topic-spotlight.mustache', function(template) {
-			//alert('Load was performed.');
-	    var html = Mustache.to_html(template, data);
-	    $('.topic-spotlight').html(html);
-		});
-	});	
-
-			<!-- Mustache - homepage ad template -->
-		$.get('assets/mustache/ad.mustache', function(template) {
-			//alert('Load was performed.');
-	    var html = Mustache.to_html(template);
-	    $('.ad').html(html);
-		});
-
-	<!-- Mustache - homepage footer template -->
-	$.get('assets/mustache/page-footer.mustache', function(template) {
-			//alert('Load was performed.');
-	    var html = Mustache.to_html(template);
-	    $('.page-footer').html(html);
-		});
-
-	<!-- Mustache - homepage meet-experts -->
-	$.get('assets/mustache/cta-meet-experts.mustache', function(template) {
-			//alert('Load was performed.');
-	    var html = Mustache.to_html(template);
-	    $('.cta.meet-experts').html(html);
-		});
-
 	</script>
 
-
+<script type="text/javascript">
+   $(window).load(function() {
+       $("#featured").orbit();
+   });
+</script>
 
 </body>
 </html>

@@ -5,24 +5,28 @@
 }
 
 .page-content{
-	@include  grid-row();
-	// clear: both;
-	padding-bottom: 1em*2;
-	@media only screen and (max-width: $topBarBreakPoint) {
-		.page-content{margin-top:$topBarHeightMobile;}
-	}
+	@include outerRow();
+	clear: both;
+	margin-top: 40px;
+	padding-top: $baseFontSize;
+	padding-bottom: $baseFontSize*2;
+}
+@media only screen and (max-width: $topBarBreakPoint) {
+  .page-content{margin-top:$topBarHeightMobile;}
 }
 
 // FOOTER
 .page-footer{
-	@include  grid-row();
-	// padding:$topbar-height inherit;
+	@include outerRow();
+	@include mobileRow();
+	padding:$navBarHeight inherit;
 }
 
 .footer-section-container{
-	// @include grid-column(12);
+	@include column(12);
 	.footer-section{
-		// @include  grid-row();
+		@include innerRow();
+		@include mobileRow();
 	}
 }
 
@@ -34,12 +38,14 @@
 
 // Flag
 .flag-container{
-	//@include  grid-row();
-	@include grid-column(12);
+	//@include innerRow();
+	@include column(12);
 	font-family: $headerFontFamily;
 	line-height:1.5;
-	padding-top: 1em/2;
-	padding-bottom: 1em/2;
+	padding-top: $baseFontSize/2;
+	padding-right: 15px;
+	padding-bottom: $baseFontSize/2;
+	padding-left: 15px;
 }
 
 //Pages
@@ -47,60 +53,75 @@
 /* Page Layouts */
 /* !Base Layout */
 #dashboard,.dashboard{}
-// #sidebar{padding-right:0;}
-section[role="complementary"]{width:20%; float: left;}
-section[role="main"]{width: 80%; float: right; @extend .clearfix;}
+/* #sidebar{padding-right:0;} */
 #aux, .aux, .recommended{
-	@include grid-column(5, $float: left);
+	@include column(5); @include mobileColumn(4);
 	@media only screen and (max-width: $topBarBreakPoint) {
-		padding-top: 1em * 4;
+		padding-top: $baseFontSize * 4;
 		}
 }
 
 /* !Update Layout */
-.stream-container{@include grid-column(7, $float: left);}
+.stream-container{@include column(7, collapse); @include mobileRow();}
 
 /* !Explore Layout */
-.explore-container{@include grid-column(7, $float: left);}
+.explore-container{@include column(7, collapse); @include mobileRow();}
 
 /* !Learn Layout */
-.cme-container{@include grid-column(12);}
+.cme-container{@include column(12); @include mobileRow();}
 
 /* !Single Item */
-.single-item-container{@include grid-column(7, $float: left);}
+.single-item-container{@include column(7); @include mobileRow();}
 
 /* !Explore Layout */
-.register-container{@include grid-column(7, $float: left);}
+.register-container{@include column(7, collapse); @include mobileRow();}
 
 /* !User Directory */
-.user-directory-container{@include grid-column(7, $float: left);}
-.user-profile-container{@include grid-column(7, $float: left);}
-.channel-list-container{@include grid-column(7, $float: left);}
+.user-directory-container{@include column(7, collapse); @include mobileRow();}
+.user-profile-container{@include column(7, collapse); @include mobileRow();}
+.channel-list-container{@include column(7, collapse); @include mobileRow();}
+
+/* !Single-Item Pages */
+article.single-item{@include innerRow();}
 
 /* !Static pages */
-.static-container{@include grid-column(7, $float: left);}
+.static-container{@include column(7, collapse); @include mobileRow();}
 
 /* Page Specific Styles */
 /* Update Page */
 //.load-more{
-//	@include grid-column(6, center);
+//	@include column(6, center);
 //	text-align: center;
-//	padding-top:1em;
-//	padding-bottom:1em;
+//	padding-top:$baseFontSize;
+//	padding-bottom:$baseFontSize;
 //}
+
+/*Marketing PAges */
+.page-banner{
+	@include outerRow();
+}
+
+.brand-container{
+	@include column(6);
+}
+
+.login-register-container{
+	@include column(6);
+	padding-top: $baseFontSize/2;
+}
 
 /* Channel Listing Page */
 .channel-list{
-	@include  grid-row();
+	@include innerRow();
 }
 .single-channel{
-	@include grid-column(6, $float: left);
+	@include column(6, collapse);
 }
 /* Preferences*/
-.pref-container{@include grid-column(12, $float: left);}
-.pref-content{@include  grid-row(); padding:{top:1em; bottom:1em;}}
-#pref-tabs{@include grid-column(3, $float: left);}
-#pref-tabs-content{@include grid-column(8, $float: left);}
+.pref-container{@include column(12); @include mobileRow();}
+.pref-content{@include innerRow(); padding:{top:$baseFontSize; bottom:$baseFontSize;}}
+#pref-tabs{@include column(3);}
+#pref-tabs-content{@include column(8);}
 
 /* Static Pages (footer utility links) */
 /*Start: static-container*/
@@ -158,3 +179,59 @@ section[role="main"]{width: 80%; float: right; @extend .clearfix;}
 		margin:0 20px 20px 0;
 	}
 }
+
+/* Off canvas layout CSS/JS provided by or adapted from work by Jason Weaver and Luke Wroblewski
+   Requires
+   globals.css
+   grid.css */
+
+  body.off-canvas { padding: 0; margin: 0; }
+
+  .container { width: 100%; }
+  .row { overflow: hidden; }
+  .row .row { overflow: visible; }
+
+  .paneled .container { overflow: hidden; }
+  .paneled .row { width: 100%; }
+
+  [role="main"]:before { content: " "; position: absolute; z-index: -1; top: 0; left: -100%; width: 100%; height: 100%; }
+
+  [role="complementary"],
+  [role="main"] { width: 100%; padding: 0 15px; display: block;	position: relative; z-index: 1; @include transition(.25s all ease-in); }
+
+  .paneled [role="main"] { padding: 0; }
+  .page-panel { width: 100%; padding: 0 15px; @include transition(.3s margin ease-in-out); background: #fff; }
+  #switchPanels { margin: 0 -15px; }
+
+  .hide-extras [role="complementary"] { display: block; }
+
+  [role="navigation"]#topMenu { @include transition(.25s all ease-in); }
+  [role="navigation"]#topMenu ul { margin-top: 0; }
+
+  [role="complementary"] { margin-left: -100%; width: 80%; float: left; z-index: 2; }
+  [role="main"] { margin-left: 0; float: right; z-index: 1; position: relative; }
+
+  .paneled [role="main"] { background: #fff; width: 500%; overflow: hidden; float: none; position: relative; left: 0; @include transition(.15s all ease-in); }
+  .page-panel { min-height: 400px; float: left; margin: 0; width: 20%; }
+
+
+  .active [role="complementary"] { margin-left: 0; }
+  .active [role="main"] { margin-right: -80%; }
+
+  .active-menu [role="navigation"]#topMenu { margin-top: 0 !important; }
+
+  @media all and (min-width: $topBarBreakPoint) {
+
+    menu-button, .sidebar-button { display: none; }
+    [role="complementary"] { width: $complementaryWidth; margin-left: 0; float: left; padding: 0 15px; }
+    [role="main"] { width: $mainWidth; padding: 0 15px; }
+
+    .paneled [role="main"] { width: 100%; padding: 0; background: #f4f4f4; left: 0 !important; }
+    .page-panel { display: block; min-height: 800px; float: none; margin: 0; width: 100%; background: #f4f4f4; }
+
+    .hide-extras [role="main"] { width: 100%; }
+    .hide-extras [role="complementary"] { display: none; }
+
+    [role="navigation"]#topMenu {	display: none; }
+
+  }
